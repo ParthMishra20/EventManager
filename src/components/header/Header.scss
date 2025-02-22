@@ -1,0 +1,154 @@
+.events-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  border: 1px solid var(--border-color);
+  border-radius: 2rem;
+  padding: 0.5rem 1rem;
+  width: 100%;
+
+  .search-icon {
+    color: var(--grey-200);
+    height: 1.8rem;
+    width: auto;
+  }
+
+  input {
+    border: none;
+    outline: none;
+    background: none;
+    color: var(--grey-200);
+    font-size: 1rem;
+    min-width: 10rem;
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+    line-height: normal;
+
+    &::placeholder {
+      color: var(--grey-200);
+      font-weight: 500;
+    }
+  }
+}
+
+.filter-options {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.2s;
+
+  input.category-picker {
+    border: none;
+    outline: none;
+    background: transparent;
+    border: 1px solid var(--border-color);
+    color: var(--text-color);
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    line-height: normal;
+    padding: 0.7rem 1rem;
+    border-radius: 2rem;
+    cursor: pointer;
+    text-align: center;
+    width: 15rem;
+  }
+
+  .category-icon-button {
+    display: none;
+  }
+
+  button,
+  .MuiInputBase-input {
+    color: var(--text-color) !important;
+  }
+
+  .MuiOutlinedInput-notchedOutline {
+    border-color: var(--border-color) !important;
+  }
+
+  .MuiInputBase-input {
+    padding: 0.7rem 1rem !important;
+  }
+
+  .MuiInputBase-root.MuiOutlinedInput-root {
+    border-radius: 2rem !important;
+  }
+
+}
+
+
+.MuiPaper-root.MuiPickersPopper-paper,
+.MuiPickersLayout-root {
+  background-color: var(--bg-color) !important;
+  border: 1px solid var(--border-color) !important;
+  border-radius: 1rem !important;
+}
+
+.MuiButtonBase-root.MuiPickersDay-root:not(.Mui-selected) {
+  border-color: var(--border-color) !important;
+  color: var(--text-color);
+}
+
+.MuiButtonBase-root.MuiPickersDay-root.Mui-selected {
+  color: var(--bg-color) !important;
+}
+
+.MuiButtonBase-root.MuiPickersDay-root,
+.MuiTypography-root.MuiDayCalendar-weekDayLabel,
+.MuiButtonBase-root.MuiIconButton-root.MuiPickersArrowSwitcher-button,
+.MuiButtonBase-root.MuiIconButton-root.MuiPickersArrowSwitcher-button,
+.MuiButtonBase-root.MuiIconButton-root.MuiPickersCalendarHeader-switchViewButton,
+.MuiButtonBase-root.MuiIconButton-root.MuiPickersCalendarHeader-switchViewButton {
+  color: var(--text-color) !important;
+}
+
+.filter-event {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem !important;
+  background-color: var(--grey-240) !important;
+  text-transform: none !important;
+  line-height: normal;
+  border-radius: 2rem !important;
+  cursor: pointer;
+  transition: background-color 0.2s;
+
+  &:hover {
+    background-color: var(--grey-200);
+  }
+
+  span {
+    color: var(--text-color);
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: system-ui, -apple-system;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+
+  .filter-options {
+    .MuiFormControl-root.MuiTextField-root {
+      width: 100%;
+    }
+
+    .category-icon-button {
+      display: block;
+    }
+
+    .MuiInputBase-input, input.category-picker {
+      display: none;
+    }
+
+    .MuiInputBase-root.MuiOutlinedInput-root, .MuiOutlinedInput-notchedOutline {
+      border: none;
+    }
+  }
+}
